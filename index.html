@@ -13,9 +13,9 @@
         
         <img src="images/iconwebsite.avif" class="websitelogo">
         <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#home" class=" nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
             
          
         </ul>
@@ -54,7 +54,12 @@
                     </a>
                 </div>
             </div>
-            <button onclick="scrollToProjects()" class="hero-btn2">View Projects</button>
+            <a href="#projects" id="btn_projects"> 
+                <button onclick="scrollToProjects()"  class="hero-btn2">View Projects</button>
+            </a>
+            
+            
+            
         
    
 <br><br><br>
@@ -71,6 +76,9 @@
                 <a href="https://www.codecademy.com/profiles/Gunaynajafli" target="_blank">
                     <img src="images/codecademy.svg" alt="Telegram">
                 </a>
+                <a href="https://github.com/GunayNajafli" target="_blank">
+                    <img src="images/github.svg" alt="Telegram">
+                </a>
             </div>
         </div>
 
@@ -81,7 +89,6 @@
 
     <!-- HOME / HERO SECTION -->
     <section id="home" class="hero">
-        <!-- your hero content here -->
     </section>
 
     <!-- ABOUT SECTION -->
@@ -110,23 +117,27 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="projects">
-        <h2>Projects</h2>
+     <h2 class="projecttext">Projects</h2>
+    <section id="projects" class="projects-row">
         <div class="project-card">
             
-            <h2>Project 1 – Constructing Logic Gates</h2>
+            <h2 class="cardtitle">Project 1 – Constructing Logic Gates</h2>
+            <a href="https://youtu.be/ZYk8kb71yuc?si=JKkYPY_LQl-EJ2JS" target="_blank" >Watch on Youtube!</a>
+        
+            <img src="images/logicgate.jpg" class="logicgateimg" alt="Logic Gates Project Image">
             <p>
                 A digital logic circuit project implementing
                 basic logic gates including AND, OR, NAND, and
-                NOT. Demonstrates the fundamental operations of each
-                gate and their combinations for performing logical
-                functions. Developed as a practical exercise in understanding
+                NOT. Developed as a practical exercise in understanding
                 the principles of digital electronics and logic design.
             </p>
         </div>
         <div class="project-card">
             
-            <h2>Project 2 – Hour of Code (Optional)</h2>
+            <h2 class="cardtitle">Project 2 – Hour of Code </h2>
+            <a href="" target="_blank">Watch on Youtube!</a>
+        
+            <img src="" >
             <p>
                 A basic project developed during Hour of Code. Created using 
                 block-based programming to understand algorithmic thinking.
@@ -140,10 +151,18 @@
 
     <!-- FOOTER -->
     <footer>
-        © 2025 My Portfolio | <a href="https://github.com/yourrepo" target="_blank">Website Repository</a>
+        © 2025 My Portfolio | <a href="https://github.com/GunayNajafli/Project3" target="_blank">Website Repository</a>
     </footer>
 
     <script src="script.js"></script>
-
+<script>
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+</script>
 </body>
 </html>
+
