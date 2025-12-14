@@ -25,4 +25,5 @@ This is my personal website project, created to showcase my skills and provide i
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/USERNAME/REPO_NAME.git
+   git clone https://github.com/GunayNajafli/Project3.git
+
